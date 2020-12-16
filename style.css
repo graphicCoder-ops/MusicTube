@@ -47,15 +47,15 @@ section h1 {
 section h5{
   padding-top: 7px;
   text-align: center;
-  font-size: 40px;
+  font-size: 50%;
   font-family: 'Russo One', sans-serif;
 }
 .scam{
 
 }
-.scam h6{padding-top: 7px;
+.scam h6{padding-top: 20%;
   text-align: center;
-  font-size: 80px;
+  font-size: 80p%;
   font-family: 'Russo One', sans-serif;
 
 }
