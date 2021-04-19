@@ -34,16 +34,16 @@ body {
 }
 
 section {
-  height: 5vh;
+  height: 10vh;
   color: black;
   font-family: 'Russo One', sans-serif
   
 }
 
 section h1 {
-  padding-top: 10px;
+  padding-top: 10vh;
   text-align: center;
-  font-size: 80px;
+  font-size: 80vh;
   font-family: 'Russo One', sans-serif;
 }
 section h5{
