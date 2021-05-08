@@ -50,7 +50,9 @@ li{
     display:cover;
     border-radius: 50px;
     padding: 30px ;
-    height: 100%;
+    height: 70vh;
+    width:70vh;
+
     min-height: 40vh;
     min-width:30vh;
     
