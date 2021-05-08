@@ -55,7 +55,7 @@ li{
 
     min-height: 40vh;
     min-width:20vh;
-    object-fit: cover;
+    object-fit: contain;
     
 
 }
