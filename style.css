@@ -1,97 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
-@import url("https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma-rtl.min.css");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    
 }
-
-body {
-  font-family: sans-serif;
+.firste{
+    height: 5vh;
+    width:100vw;
+    min-height: 10vh;
+    min-width: 20vh;
+    
+    background: blue;
+   
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:25px;
+    margin:5px  ;
+    color: white;
+    border-radius: 8px;
+    border:2px solid red;
+    display:inline-block;
+    
 }
-
-.intro {
-  height: 100vh;
-}
-
-.intro video {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.intro h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 75px;
-  color: white;
-  font-family: 'Josefin Sans', sans-serif;
+ul{
+    display:inline-flex;
+    
 
 }
+li{
+    list-style: none;
+    inline-size: 100px;
+    margin-inline: 5px;
+}
+.sect1{
+    font-family: 'monospace',"DejaVu Sans Mono";
+    font-size: 10vh;
+    padding:12,23,34,56;
 
-section {
-  height: 10vh;
-  color: black;
-  font-family: 'Russo One', sans-serif
-  
-}
-
-section h1 {
-  padding-top: 10vh;
-  text-align: center;
-  font-size: 80vh;
-  font-family: 'Russo One', sans-serif;
-}
-section h5{
-  padding-top: 4px;
-  text-align: center;
-  font-size: 50%;
-  font-family: 'Russo One', sans-serif;
-}
-.scam{
-  font-family:'Russo One', sans-serif;
-  font-size:100%;
 
 }
-.scam h4{padding-top: 20%;
-  text-align: center;
-  font-size: 100%;
-  font-family: 'Russo One', sans-serif;
-
-}
-.scam h6{
-  text-align: center;
-
-}
-]
-#ep2{
-  height: 70%;
-  width: 100%;
-  padding-bottom:20px;
-  
-.
-
-}
-.embed-responsiveembed-responsive-21by9{
-  height: 100px;
-  width: 100px;
-  padding-left: 80vh;
-  padding-bottom: 20vh;
-}
-.ROll{
-  padding-left: 30%;
-  font-size:30px;
-}
-.kal{
-  padding-left: 75%;
-}
-.kal2{
-  padding-left: 25%;
-  font-size: 74%;
-  color:red;
+.one{
+    display: block;
+    height:200px;
+    width: 400px;
+    border:6px solid green;
 }
 
+
+.vide{
+    display:block;
+    border-radius: 50px;
+    padding: 30px ;
+    height: 50vh;
+    width:;
+    min-height:;
+    
+
+}
+.text1{
+    font-family: 'Josefin Sans', sans-serif;
+}
