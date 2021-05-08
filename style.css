@@ -47,7 +47,7 @@ li{
 
 
 .vide{
-    display:inline-block;
+    display:cover;
     border-radius: 50px;
     padding: 30px ;
     height: 40vh;
