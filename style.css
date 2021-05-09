@@ -48,15 +48,13 @@ li{
 
 
 .vide{
-    display:cover;
+    display:flex;
     border-radius: 5vw;
-    padding-left:20px ;
-    height: 60vh;
+     padding: 30px ;
+    height: 50vh; 
     width:90vw;
-
-    min-height: 40vh;
-    min-width:50vw;
-    object-fit:contain;
+    min-height:;
+    object-fit:cover;
     
 
 }
