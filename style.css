@@ -78,6 +78,7 @@ li{
     padding-left:10 ;
     border-radius: 3px;
     object-fit:cover;
+    min-width: 10vw;
 
     border-radius: 3vw;
 
