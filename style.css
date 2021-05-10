@@ -65,9 +65,11 @@ li{
 }
 .container1{
     display:grid;
-    grid-gap: 5vw;
+    grid-gap: 2vw;
     background-color: #FFD700;
     align-items: center;
+    min-width: none;
+    min-height: none;
 
 
 }
