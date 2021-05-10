@@ -79,9 +79,9 @@ li{
     display:grid;
     height:50vh;
     weight:40vw;
-    padding-left:10 ;
-    border-radius: 3px;
-    object-fit:fill;
+    padding: 5vw ;
+    border-radius: 3vh;
+    object-fit:scale-down;
     min-width: 10vw;
 
     border-radius: 3vw;
