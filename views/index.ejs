@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great</title>
+    <style>
+        
+            img {
+  width: 500px;
+  height: 300px;
+  object-fit: contain;
+}
+
+        
+        body{
+            margin:0;
+            font-size: 1.4rem;
+            font-family:cursive;
+        }
+      .audioplayer{
+          position:fixed;
+          bottom:0px;
+          width:100%;
+      }
+      .wow{padding:10px;
+      display: flex;
+      flex-direction: column;}
+      .wow.p{color:grey;
+      }
+      .inner{
+          display: flex;
+      }
+      .btn{
+          border:none;
+          background-color: cornflowerblue;
+          color: white;
+          font-size: 2rem;
+      }
+      
+        .text{
+            font-size: 2rem;
+            border-radius:3px;
+border:none;
+border-bottom: solid;
+border-color:#0B5351;
+transition: 0.3s;
+outline:none;
+        }
+        .text:focus-within{
+            border-color:rgb(104, 233, 147);
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+    <form name="search" class="search" method="POST" action="search">
+        <input type="text" class="text" name="searchtext">
+        <input type="submit" class="btn" value="go"> 
+    </form></center>
+   <audio class="audioplayer" controls autoplay><source src="<%= video_url %>">
+</source></audio>
+<div class="wow">
+    <% for(var gate in data_url){ %>
+        <a class="inner" href="/audio/<%= data_url[gate].id %>">
+    <img src="<%= data_url[gate].url %>"><p><%= data_url[gate].text %></p>
+        </a>
+<% } %>
+</div>
+</body>
+</html>
