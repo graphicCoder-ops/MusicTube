@@ -41,5 +41,5 @@ app.get("/json", (req, res) => {
   res.send(fn[3]);
 });
 app.listen(8080, () => {
-  console.log("listening");
+  console.log("listening at http://localhost:8080/audio");
 });

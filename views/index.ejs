@@ -8,9 +8,11 @@
     <style>
         
             img {
-  width: 500px;
-  height: 300px;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
   object-fit: contain;
+  
 }
 
         
@@ -26,8 +28,13 @@
       }
       .wow{padding:10px;
       display: flex;
-      flex-direction: column;}
-      .wow.p{color:grey;
+      flex-direction: column;
+     
+    }
+      p{color:rgb(39, 39, 39);
+        padding:10px;
+        padding-left: 30px;
+        text-decoration:none;
       }
       .inner{
           display: flex;
@@ -36,7 +43,24 @@
           border:none;
           background-color: cornflowerblue;
           color: white;
+          padding-left: 30px;
+          padding-right: 30px;
+          padding-bottom: 5px;
+          border-radius: 12px;
           font-size: 2rem;
+      }
+      .btn:hover{
+        background-color: rgb(87, 129, 207);
+        cursor: pointer;
+      }
+      .card{
+        padding: 20px;
+        border-radius:10px ;
+        background-color: rgb(247, 247, 248);
+        margin: 10px;
+      }
+      .card:hover{
+        background-color: aliceblue;
       }
       
         .text{
@@ -51,6 +75,9 @@ outline:none;
         .text:focus-within{
             border-color:rgb(104, 233, 147);
         }
+        .search{
+            padding:10px;
+        }
     </style>
 </head>
 
@@ -64,9 +91,12 @@ outline:none;
 </source></audio>
 <div class="wow">
     <% for(var gate in data_url){ %>
-        <a class="inner" href="/audio/<%= data_url[gate].id %>">
-    <img src="<%= data_url[gate].url %>"><p><%= data_url[gate].text %></p>
-        </a>
+        <div class="card">
+            <a class="inner" href="/audio/<%= data_url[gate].id %>">
+            <img src="<%= data_url[gate].url %>"><p><%= data_url[gate].text %></p>
+                </a>
+            </div>
+        
 <% } %>
 </div>
 </body>
