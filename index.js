@@ -21,6 +21,7 @@ app.get("/audio/:uid", (req, res) => {
     preferFreeFormats: true,
     youtubeSkipDashManifest: true,
   }).then((out) => {
+    console.log(out);
     fn[3] = fn[0](out);
     res.redirect("/audio");
     
