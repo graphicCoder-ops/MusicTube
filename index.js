@@ -6,7 +6,6 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const urlencode = bodyParser.urlencoded({ extended: false });
 const app = express();
-var stri = "nah";
 app.set("view engine", "ejs");
 
 app.get("/audio", (req, res) => {
@@ -24,7 +23,7 @@ app.get("/audio/:uid", (req, res) => {
   }).then((out) => {
     fn[3] = fn[0](out);
     res.redirect("/audio");
-    //stri = JSON.stringify(out);
+    
   });
 });
 app.post("/search", urlencode, (req, res) => {
