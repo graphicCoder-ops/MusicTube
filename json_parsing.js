@@ -1,5 +1,5 @@
 function tourl(out) {
-  //console.log(out.requested_formats[1].url);
+  console.log(out.requested_formats);
   return out.requested_formats[1].url;
 }
 var audio_string = "Cannot get Audio Stream url for audio";
