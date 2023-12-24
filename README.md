@@ -1,6 +1,6 @@
 # MusicTube
 
-MusicTube is a web application that allows you to extract data from YouTube using Node.js libraries such as Youtube-dl. It provides a user-friendly interface where you can search for videos, create playlists, and play audio tracks directly from YouTube.
+MusicTube is a web application that allows you to extract data from YouTube using Node.js libraries such as Youtube-dl. It provides a user-friendly interface where you can search for videos and lets you play audio only for music purpose
 
 ## Goal
 Introduced me to working of node.js and express.js with some additional libraries... Remember everything is from **youtube** that is made clear!
