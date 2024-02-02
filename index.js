@@ -11,7 +11,7 @@ app.set("view engine", "ejs");
 app.get("/", (req, res) => {
   res.render("index", { video_url: json_functions[3], data_url: json_functions[1] });
 });
-app.get("/:uid", (req, res) => {
+app.get("/audio/:uid", (req, res) => {
   console.log(req.params.uid);
   const youtube = yt(req.params.uid, {
     dumpSingleJson: true,
@@ -21,16 +21,11 @@ app.get("/:uid", (req, res) => {
     preferFreeFormats: true,
     youtubeSkipDashManifest: true,
   }).then((out) => {
-    console.log(out);
+    
     json_functions[3] = json_functions[0](out);
-    res.redirect("/audio");
+    res.redirect("/");
     
   });
-});
-app.post("/search", urlencode, (req, res) => {
-  searchYoutube[0](req.body.searchtext, res);
-
-  /**/
 });
 app.post("/search", urlencode, (req, res) => {
   searchYoutube[0](req.body.searchtext, res);
