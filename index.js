@@ -36,5 +36,5 @@ app.get("/json", (req, res) => {
   res.send(json_functions[3]);
 });
 app.listen(8080, () => {
-  console.log("listening at http://localhost:8080/audio");
+  console.log("listening at port 8080");
 });
