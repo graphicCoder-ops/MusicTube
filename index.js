@@ -9,7 +9,8 @@ const app = express();
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-  res.render("index", { video_url: json_functions[3], data_url: json_functions[1] });
+  json_functions[3]="";
+  res.render("index", { video_url: "", data_url: [] });
 });
 app.get("/audio/:uid", (req, res) => {
   console.log(req.params.uid);
@@ -23,12 +24,18 @@ app.get("/audio/:uid", (req, res) => {
   }).then((out) => {
     
     json_functions[3] = json_functions[0](out);
-    res.redirect("/");
+    res.render("index", { video_url: json_functions[3], data_url: json_functions[1] });
     
   });
 });
 app.post("/search", urlencode, (req, res) => {
   searchYoutube[0](req.body.searchtext, res);
+  json_functions[3]="";
+  /**/
+});
+app.post("/audio/search", urlencode, (req, res) => {
+  searchYoutube[0](req.body.searchtext, res);
+  json_functions[3]="";
 
   /**/
 });

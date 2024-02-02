@@ -90,6 +90,9 @@ outline:none;
    <audio class="audioplayer" controls autoplay><source src="<%= video_url %>">
 </source></audio>
 <div class="wow">
+  <% if (data_url.length == 0 ) { %>
+    <center><p style="font-size: xx-large; padding-top: 100px;">Nothing here, Maybe search something!!!</p></center>
+    <% } %>
     <% for(var gate in data_url){ %>
         <div class="card">
             <a class="inner" href="/audio/<%= data_url[gate].id %>">
