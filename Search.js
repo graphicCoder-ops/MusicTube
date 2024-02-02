@@ -1,14 +1,12 @@
 const YouTube = require("youtube-sr").default;
-const fn = require("./json_parsing");
-link = "nah";
+const json_functions = require("./json_parsing");
+link = "Unknown Link";
 
 function results(url, res) {
   YouTube.search(url, { limit: 10 })
     .then((x) => {
-      fn[1] = fn[2](x); // use different approach for this
-      //console.log(x);
-      //console.log(fn[3]);
-      res.render("index", { video_url: fn[3], data_url: fn[1] });
+      json_functions[1] = json_functions[2](x); 
+      res.render("index", { video_url: json_functions[3], data_url: json_functions[1] });
     })
     .catch(console.error);
 }

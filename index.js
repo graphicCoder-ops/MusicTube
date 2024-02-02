@@ -1,6 +1,6 @@
 const express = require("express");
-const fn = require("./json_parsing");
-const serp = require("./Search.js");
+const json_functions = require("./json_parsing");
+const searchYoutube = require("./Search.js");
 const yt = require("youtube-dl-exec");
 const path = require("path");
 const bodyParser = require("body-parser");
@@ -8,10 +8,10 @@ const urlencode = bodyParser.urlencoded({ extended: false });
 const app = express();
 app.set("view engine", "ejs");
 
-app.get("/audio", (req, res) => {
-  res.render("index", { video_url: fn[3], data_url: fn[1] });
+app.get("/", (req, res) => {
+  res.render("index", { video_url: json_functions[3], data_url: json_functions[1] });
 });
-app.get("/audio/:uid", (req, res) => {
+app.get("/:uid", (req, res) => {
   console.log(req.params.uid);
   const youtube = yt(req.params.uid, {
     dumpSingleJson: true,
@@ -22,23 +22,23 @@ app.get("/audio/:uid", (req, res) => {
     youtubeSkipDashManifest: true,
   }).then((out) => {
     console.log(out);
-    fn[3] = fn[0](out);
+    json_functions[3] = json_functions[0](out);
     res.redirect("/audio");
     
   });
 });
 app.post("/search", urlencode, (req, res) => {
-  serp[0](req.body.searchtext, res);
+  searchYoutube[0](req.body.searchtext, res);
 
   /**/
 });
-app.post("/audio/search", urlencode, (req, res) => {
-  serp[0](req.body.searchtext, res);
+app.post("/search", urlencode, (req, res) => {
+  searchYoutube[0](req.body.searchtext, res);
 
   /**/
 });
 app.get("/json", (req, res) => {
-  res.send(fn[3]);
+  res.send(json_functions[3]);
 });
 app.listen(8080, () => {
   console.log("listening at http://localhost:8080/audio");
